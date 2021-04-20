@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const app = express()
 const authRouter = require('./routes/auth.routes')
-const cors = require('./middleware/cors.middleware')
+const { cors } = require('./middleware/cors.middleware')
 
 const PORT = config.get('PORT')
 const DB_URL = config.get('DB_URL')
@@ -24,7 +24,7 @@ const run = async () => {
     })
 
   } catch (err) {
-
+    console.log(err);
   }
 }
 
