@@ -2,13 +2,13 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 
-import { logout } from '../../reducers/userReducer';
+import { selectors as userIsAuth, userReducer } from '../../store/userReducer'
 import Logo from '../../assets/img/logo.svg'
 
 import './navbar.scss'
 
 export const Navbar = () => {
-  const isAuth = useSelector(state => state.user.isAuth)
+  const isAuth = useSelector(userIsAuth.isAuth)
   const dispatch = useDispatch()
 
   const enterLink = (!isAuth &&
@@ -22,7 +22,10 @@ export const Navbar = () => {
     </div>)
 
   const exitLink = (isAuth &&
-    <div className="navbar__login" onClick={() => dispatch(logout())}>
+    <div
+      className="navbar__login"
+      onClick={() => dispatch(userReducer.actions.logOut())}
+    >
       Выход
     </div>)
 
