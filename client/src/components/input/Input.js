@@ -1,7 +1,7 @@
 import React from 'react';
 import './input.scss'
 
-const Input = (props) => {
+export const Input = (props) => {
   return (
     <input
       onChange={(event) => props.setValue(event.target.value)}
@@ -10,5 +10,3 @@ const Input = (props) => {
       placeholder={props.placeholder} />
   );
 };
-
-export default Input;

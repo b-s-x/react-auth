@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './registration.scss'
-import Input from '../input/Input'
+
+import { Input } from '../../components/input/Input'
 import { registration } from "../../actions/user";
 
-const Registration = () => {
+import './registration.scss'
+
+export const RegistrationPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -31,5 +33,3 @@ const Registration = () => {
     </div>
   );
 };
-
-export default Registration;
