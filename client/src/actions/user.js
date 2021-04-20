@@ -36,7 +36,7 @@ export const auth = () => {
       if (!token) return
 
       const response = await axios.get(`http://localhost:5000/api/auth/auth`,
-        { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
+        { headers: { Authorization: `${localStorage.getItem('token')}` } }
       )
 
       dispatch(setUser(response.data.user))
