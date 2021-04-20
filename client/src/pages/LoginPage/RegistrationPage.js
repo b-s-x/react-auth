@@ -21,7 +21,7 @@ export const RegistrationPage = () => {
       <Input
         value={password}
         setValue={setPassword}
-        type='password'
+        type='current-password'
         placeholder='Введите пароль...'
       />
       <button

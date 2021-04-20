@@ -12,28 +12,28 @@ export const Navbar = () => {
   const dispatch = useDispatch()
 
   const enterLink = (!isAuth &&
-    <div className="navbar__login">
-      <NavLink to="/login">Войти</NavLink>
+    <div className='navbar__login'>
+      <NavLink to='/login'>Войти</NavLink>
     </div>)
 
   const registerLink = (!isAuth &&
-    <div className="navbar__registration">
-      <NavLink to="/registration">Регистрация</NavLink>
+    <div className='navbar__registration'>
+      <NavLink to='/registration'>Регистрация</NavLink>
     </div>)
 
   const exitLink = (isAuth &&
     <div
-      className="navbar__login"
+      className='navbar__login'
       onClick={() => dispatch(userReducer.actions.logOut())}
     >
       Выход
     </div>)
 
   return (
-    <div className="navbar">
-      <div className="container">
-        <img src={Logo} alt="" className="navbar__logo" />
-        <div className="navbar__header">MERN CLOUD</div>
+    <div className='navbar'>
+      <div className='container'>
+        <img src={Logo} alt='' className='navbar__logo' />
+        <div className='navbar__header'>MERN CLOUD</div>
         {enterLink}
         {registerLink}
         {exitLink}

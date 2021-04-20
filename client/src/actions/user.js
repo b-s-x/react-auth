@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { userReducer } from "../store/userReducer";
+import { userReducer } from '../store/userReducer';
 
 export const registration = async (email, password) => {
   try {
