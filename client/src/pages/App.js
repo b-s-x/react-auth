@@ -6,8 +6,8 @@ import { Navbar } from '../components/navbar/Navbar'
 import { RegistrationPage } from './LoginPage/RegistrationPage';
 import { LoginPage } from './LoginPage/LoginPage';
 
-import { auth } from '../actions/user'
-import { selectors as userIsAuth } from '../store/userReducer'
+import { auth } from '../asyncActions/asyncUserActions'
+import { selectors as userIsAuth} from '../store/userReducer'
 
 import './app.scss'
 

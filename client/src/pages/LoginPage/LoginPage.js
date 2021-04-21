@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { Input } from '../../components/input/Input';
-import { login } from '../../actions/user';
+import { login } from '../../asyncActions/asyncUserActions';
 
 import './registration.scss'
 
@@ -23,12 +23,13 @@ export const LoginPage = () => {
       <Input
         value={password}
         setValue={setPassword}
-        type='current-password'
+        type='password'
         placeholder='Введите пароль...'
       />
       <button
         className='registration__btn'
-        onClick={() => dispatch(login(email, password))}
+        onClick={() => dispatch(login({email, password}))}
+        // onClick={() => dispatch(test(1111))}
       >
         Войти
         </button>
